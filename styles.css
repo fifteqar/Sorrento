@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Calibri, sans-serif;
+    margin: auto;
+    max-width: 960px;
+    border: 0.5px solid #4d1d18;
+    background-color: #b08581;
+}
+
+
+/* Style the top navigation bar */
+
+nav {
+    overflow: hidden;
+}
+
+
+/* Style the navigation bar links */
+
+nav a {
+    float: left;
+    display: block;
+    color: #4d1d18;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+
+/* Change color on hover */
+
+nav a:hover {
+    background-color: #ddd;
+    color: #555;
+}
+
+
+/* Change color on active */
+
+nav a.active {
+    background-color: #682721;
+    color: white;
+}
+
+
+/* Column container */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 10px;
+}
+
+
+/* Create two unequal columns that sits next to each other */
+
+
+/* Sidebar/left column */
+
+aside {
+    -ms-flex: 50%;
+    /* IE10 */
+    flex: 50%;
+    background-color: white;
+    padding: 10px;
+}
+
+
+/* Main column */
+
+section {
+    flex: 50%;
+    background-color: white;
+    padding: 10px;
+}
+
+h2 {
+    color: #87423c;
+    font-size: 36px;
+}
+
+h5 {
+    color: #4d1d18;
+    font-size: 24px;
+}
+
+p {
+    line-height: 150%;
+}
+
+p>a {
+    color: #87423c;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/* Style inputs */
+
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=tel] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4d1d18;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #694e4b;
+}
+
+table {
+    font-size: 14px;
+    width: 100%;
+}
+
+th,
+td {
+    border-bottom: 1px solid #4d1d18;
+    text-align: center;
+}
+
+th {
+    background-color: #b08581;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* Footer */
+
+footer {
+    border-top: 1px solid black;
+    text-align: center;
+    background: #ddd;
+    color: #87423c;
+    font-size: small;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+    nav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+footer>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
